@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd63f6f2-8ad7-4284-821a-54e18e04fd93" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../RESTful-day66/.env" afterDir="false" />
-    </list>
+    <list default="true" id="fd63f6f2-8ad7-4284-821a-54e18e04fd93" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,11 +20,11 @@
   </component>
   <component name="Git.Settings">
     <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2a9qwErfRWxLpxF9JiWbIs5MPMS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -38,7 +36,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "amc-master",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/Chapm/Documents/Coding/100-days-py/Flask-Blog-RESTful-Auth",
     "settings.editor.selected.configurable": "configurable.group.tools"
   }
@@ -94,5 +92,15 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/forms.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
