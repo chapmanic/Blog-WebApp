@@ -48,7 +48,7 @@
                                 <img src="{{ comment.comment_author.email | gravatar }}"/>
                             </div>
                             <div class="commentText">
-                                <span class="date sub-text">{{ comment.comment_author.first_name }} {{posted_time[loop.index - 1]}}</span><br>
+                                <span class="date sub-text">@{{ comment.comment_author.username }} · {{posted_time[loop.index - 1]}}</span><br>
                                 <span>{{ comment.text }}</span><br>
                                 <span>
                                     {% if current_user.id == comment.comment_author.id %}

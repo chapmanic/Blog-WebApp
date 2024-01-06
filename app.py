@@ -274,7 +274,7 @@ def edit_post(post_id):
 @login_required
 def delete_post(post_id):
     post_to_delete = db.get_or_404(BlogPost, post_id)
-    if current_user.id == post_to_delete.id:
+    if current_user.id == post_to_delete.author_id:
         db.session.delete(post_to_delete)
         db.session.commit()
         return redirect(url_for('get_all_posts'))
@@ -333,5 +333,5 @@ def edit_user(user_id):
 
 
 if __name__ == "__main__":
-    # app.run(debug=False)
-    app.run(debug=True, port=5002)
+    app.run(debug=False)
+    # app.run(debug=True, port=5002)
