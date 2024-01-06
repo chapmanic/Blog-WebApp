@@ -17,6 +17,7 @@ class CreatePostForm(FlaskForm):
 # Create registration form
 class RegistrationForm(FlaskForm):
     email = StringField('Email Address', validators=[DataRequired()])
+    username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     first_name = StringField('First name', validators=[DataRequired()])
     last_name = StringField('Last name', validators=[DataRequired()])
@@ -32,6 +33,7 @@ class LoginForm(FlaskForm):
 
 class UserEdit(FlaskForm):
     email = StringField('Email Address', validators=[DataRequired()])
+    username = StringField('Username', validators=[DataRequired()])
     first_name = StringField('First name', validators=[DataRequired()])
     last_name = StringField('Last name', validators=[DataRequired()])
     is_admin = SelectField("admin Account", choices=[(0, "No"), (1, "Yes")])

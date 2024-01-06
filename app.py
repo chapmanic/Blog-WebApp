@@ -97,6 +97,7 @@ class User(UserMixin, db.Model):
     # Currently used by Comment DB and BlogPosts - Both for author ID
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100), unique=True)
+    username = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
     first_name = db.Column(db.String(1000))
     last_name = db.Column(db.String(1000))
@@ -309,12 +310,14 @@ def edit_user(user_id):
     if current_user.is_admin:
         edit_user_form = UserEdit(
             email=user_to_edit.email,
+            username=user_to_edit.username,
             first_name=user_to_edit.first_name,
             last_name=user_to_edit.last_name,
             is_admin=user_to_edit.is_admin
         )
         if edit_user_form.validate_on_submit():
             user_to_edit.email = edit_user_form.email.data
+            user_to_edit.username = edit_user_form.username.data
             user_to_edit.first_name = edit_user_form.first_name.data
             user_to_edit.last_name = edit_user_form.last_name.data
             user_to_edit.is_admin = edit_user_form.is_admin.data
@@ -326,5 +329,5 @@ def edit_user(user_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
-    # app.run(debug=False, port=5002)
+    # app.run(debug=False)
+    app.run(debug=True, port=5002)
