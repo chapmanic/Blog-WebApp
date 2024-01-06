@@ -141,6 +141,7 @@ def register():
         )
         new_user = User(
             email=form.email.data,
+            username=form.username.data,
             first_name=form.first_name.data,
             last_name=form.last_name.data,
             password=hashed_password
