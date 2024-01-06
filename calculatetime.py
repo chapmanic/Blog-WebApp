@@ -14,7 +14,12 @@ def calculate_time_difference(posted_time):
     minutes, _ = divmod(remainder, 60)
 
     if days > 0:
-        return f"{days} days ago"
+        if days < 10:
+            return f"{days} days ago"
+        else:
+            # This return Month, day and year if over 10days old
+            time_posted = posted_time.strftime("%B %d, %Y")
+            return f"{time_posted}"
     elif hours > 0:
         return f"{hours} hours ago"
     elif minutes > 0:
