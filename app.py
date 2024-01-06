@@ -31,7 +31,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DB_URL")
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-# Init Gravatar
+# Init Gravatar for comment display pictures
 gravatar = Gravatar(app,
                     size=100,
                     rating='g',
@@ -94,7 +94,7 @@ class BlogPost(db.Model):
 # Create a User table for all your registered users.
 class User(UserMixin, db.Model):
     __tablename__ = "users"
-    # Current used by Comment DB and BlogPosts - Both for author ID
+    # Currently used by Comment DB and BlogPosts - Both for author ID
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
@@ -111,10 +111,10 @@ class Comment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.Text, nullable=False)
     posted_time = db.Column(db.DateTime)
-    # Created REL for User and Comment
+    # Created relationship for User and Comment
     comment_author = relationship("User", back_populates="comments")
     author_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    # Created REL for blog post comment is posted to. Create Blog id value
+    # Created relationship for blog post comment is posted to. Create Blog id value
     blog_post = relationship("BlogPost", back_populates="post_comments")
     blog_id = db.Column(db.Integer, db.ForeignKey("blog_posts.id"))
 
@@ -123,7 +123,7 @@ with app.app_context():
     db.create_all()
 
 
-# Werkzeug to hash the user's password, add to DB, login in after.
+# Werkzeug used to hash the user's password, add to DB, login in after if va.
 @app.route('/register', methods=["POST", "GET"])
 def register():
     form = RegistrationForm()
@@ -210,6 +210,7 @@ def show_post(post_id):
         db.session.add(new_com)
         db.session.commit()
         # Tracing the days, H, M of each comment
+        return redirect(url_for('show_post', post_id=post_id))
     comments = Comment.query.filter_by(blog_id=post_id).all()
     the_time = []
     for comments_time in comments:
