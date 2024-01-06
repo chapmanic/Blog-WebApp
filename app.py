@@ -131,6 +131,9 @@ def register():
     if current_user.is_authenticated:
         return redirect(url_for('get_all_posts'))
     if request.method == "POST" and form.validate():
+        if form.password.data != form.password_confirm.data:
+            flash("Password do not match, Please try again", "danger")
+            return redirect(url_for("register"))
         hashed_password = generate_password_hash(
             form.password.data,
             method="pbkdf2:sha256",
