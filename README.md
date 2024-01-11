@@ -26,5 +26,5 @@ Contributions to the Blogga-app are welcome. Please fork the repository and subm
 This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
-For any inquiries, please contact [Project Maintainer's Email].
+For any inquiries, please contact aden@accessmycare.co.uk.
 
