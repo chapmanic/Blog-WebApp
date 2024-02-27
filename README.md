@@ -20,8 +20,8 @@ The App is coded using Python (Flask Framework), uses a SQL database (SQLAlchemy
     <img src="images/regSC.png" alt="User Registration and Login Screenshot" width="700" height="600">
 
 2. **Access to Content Feed**: Authorised users access the applications ability to create, update, and delete their own blog posts. Non-authorised users may also read blog posts by others, fostering a community of shared information. <br>
-<br>
-    <img src="images/postSC.png" alt="Content Feed Screenshot" width="700" height="600"> 
+
+    <img src="images/postSC.png" alt="Content Feed Screenshot" width="700" height="600"> <br>
 
 3. **Creating a Blog Post**: Users can create blog posts using a form which supports advanced formatting options with CKEditor, allowing for rich text editing and versatile content creation. <br>
 
