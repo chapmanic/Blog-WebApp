@@ -1,9 +1,13 @@
-# Blogga-app
+# Blog web application
 
 ## Description
-Blogga-app is a web application designed for creating blog posts. It is built using Flask, a Python web framework, and utilizes SQL for database management and Flask-Auth for authentication.
+This is a blog web application. It is built using Flask, a Python web framework and utilises SQLite/Postgres for database management and Flask-Auth for authentication.
 
-The App is coded using Python (Flask Framework), uses a SQL database (SQLAlchemy), Bootstrap 5 (CSS Framework).
+## Stack
+- Python (Flask Framework)
+- SQL database (SQLAlchemy)
+- Bootstrap 5 (CSS Framework)
+- Javascript (Basic/Raw)
 
 ## Features
 - User authentication and registration, Utilisation of Bcrypt
@@ -34,21 +38,9 @@ The App is coded using Python (Flask Framework), uses a SQL database (SQLAlchemy
 
 
 ## Installation
-To set up the Blogga-app on your local machine, follow these steps:
+To set up the application on your local machine, follow these steps:
 1. Clone the repository: `git clone https://github.com/chapmanic/Blogga-app.git`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Initialize the database: `python init_db.py`
 4. Run the application: `python app.py`
-
-## Usage
-After installation, visit `http://localhost:5000` in your web browser to start using the app.
-
-## Contributing
-Contributions to the Blogga-app are welcome. Please fork the repository and submit a pull request for review.
-
-## License
-This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-For any inquiries, please contact aden@accessmycare.co.uk.
 
